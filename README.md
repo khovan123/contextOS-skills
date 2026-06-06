@@ -40,3 +40,13 @@ Copy `_template/` when adding a new pack.
 - Prefer project evidence over broad prompt words.
 - Keep workflows compact and action-oriented.
 - Do not require optional graph or memory adapters.
+
+## PR Validation
+
+Every PR runs:
+
+```bash
+node scripts/validate-skills.mjs
+```
+
+The validator requires each skill folder to include `SKILL.md`, `skill.yaml`, matching `id`, `positive_triggers`, `evidence`, `negative_triggers`, and `workflow`.
