@@ -1,0 +1,34 @@
+name: Routing Bug
+description: Report a skill that was selected or rejected incorrectly.
+title: "Routing bug: "
+labels:
+  - routing
+body:
+  - type: input
+    id: prompt
+    attributes:
+      label: Prompt
+      description: The user prompt that produced the wrong skill routing.
+    validations:
+      required: true
+  - type: input
+    id: selected
+    attributes:
+      label: Selected Skill
+      description: Skill that was selected incorrectly, or `(none)`.
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Expected Skill
+      description: Skill that should have been selected, or `(none)`.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Repo Evidence
+      description: Relevant package dependencies, files, configs, or framework evidence.
+    validations:
+      required: true

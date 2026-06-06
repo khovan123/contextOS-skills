@@ -1,0 +1,53 @@
+name: New Skill Pack
+description: Propose a ContextOS-ready skill pack.
+title: "Skill: "
+labels:
+  - skill-pack
+body:
+  - type: input
+    id: skill_id
+    attributes:
+      label: Skill ID
+      description: Folder-safe ID, for example `stripe-payment` or `nestjs-module`.
+      placeholder: nestjs-module
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: What agent capability should this skill provide?
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Positive Triggers
+      description: Prompt phrases, files, and dependencies that should select this skill.
+      placeholder: |
+        prompts: [nestjs, module, controller]
+        files: [src/**/*.module.ts]
+        dependencies: [@nestjs/core]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Project Evidence
+      description: Evidence needed before high-confidence routing.
+    validations:
+      required: true
+  - type: textarea
+    id: negative
+    attributes:
+      label: Negative Triggers
+      description: Adjacent cases where this skill should not be selected.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow
+      description: Short execution checklist for the agent.
+    validations:
+      required: true

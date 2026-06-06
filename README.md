@@ -50,3 +50,5 @@ node scripts/validate-skills.mjs
 ```
 
 The validator requires each skill folder to include `SKILL.md`, `skill.yaml`, matching `id`, `positive_triggers`, `evidence`, `negative_triggers`, and `workflow`.
+
+Use the PR template when submitting a pack. Use the issue templates for new skill requests or routing bugs.
